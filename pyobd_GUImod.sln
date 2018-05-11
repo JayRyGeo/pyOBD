@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "pyobd_GUImod", "pyobd_GUImod.pyproj", "{AD29193E-4F3B-482C-8C75-C3239D7FCC36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD29193E-4F3B-482C-8C75-C3239D7FCC36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD29193E-4F3B-482C-8C75-C3239D7FCC36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B145454D-6B86-4596-B8D0-53F0428E59BB}
+	EndGlobalSection
+EndGlobal
