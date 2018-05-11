@@ -7,6 +7,7 @@
 ###########################################################################
 #-------------------------------------------------------------------------------
 
+#The wx import here is for a module that only runs on Py2.3. Keep this in mind
 import os
 import wx
 import time
