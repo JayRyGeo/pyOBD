@@ -9,13 +9,14 @@ import time
 
 from obd_utils import scanSerial
 
-class OBD_Capture():
+class OBD_Capture(object):
     def __init__(self):
         self.supportedSensorList = []
         self.port = None
         localtime = time.localtime(time.time())
 
     def connect(self):
+        """Try to connect to serial ports"""
         portnames = scanSerial()
         print (portnames)
         for port in portnames:
@@ -38,7 +39,7 @@ class OBD_Capture():
     def capture_data(self):
 
         text = ""
-        #Find supported sensors - by getting PIDs from OBD
+        # Find supported sensors - by getting PIDs from OBD
         # its a string of binary 01010101010101 
         # 1 means the sensor is supported
         self.supp = self.port.sensor(0)[1]

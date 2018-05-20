@@ -31,11 +31,13 @@
     <Compile Include="debugEvent.py" />
     <Compile Include="obd2_codes.py" />
     <Compile Include="obd_capture.py" />
-    <Compile Include="obd_gui.py" />
     <Compile Include="obd_io.py" />
     <Compile Include="obd_recorder.py" />
     <Compile Include="obd_sensors.py" />
     <Compile Include="obd_utils.py" />
+    <Compile Include="testingScript.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="doc" />

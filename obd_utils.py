@@ -20,6 +20,16 @@ def scanSerial():
             s.close()   # explicit close 'cause of delayed GC in java
         except serial.SerialException:
             pass
+        
+    #Check in windows
+    for i in range(4,6):
+        try:
+            s = serial.Serial(
+                port = 'COM' + str(i))
+            available.append(s.portstr)
+            s.close()
+        except serial.SerialException:
+            pass
 # Enable obdsim 
 #for i in range(256):
 #try: #scan Simulator
