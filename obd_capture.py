@@ -9,6 +9,8 @@ import time
 
 from obd_utils import scanSerial
 
+from Logger import WriteToLog
+
 class OBD_Capture(object):
     def __init__(self):
         self.supportedSensorList = []
@@ -18,7 +20,7 @@ class OBD_Capture(object):
     def connect(self):
         """Try to connect to serial ports"""
         portnames = scanSerial()
-        print (portnames)
+        WriteToLog(portnames)
         for port in portnames:
             self.port = obd_io.OBDPort(port, None, 2, 2)
             if(self.port.State == 0):
@@ -28,7 +30,7 @@ class OBD_Capture(object):
                 break
 
         if(self.port):
-            print ("Connected to "+self.port.port.name)
+            WriteToLog("Connected to "+self.port.port.name)
             
     def is_connected(self):
         return self.port
@@ -80,6 +82,6 @@ class OBD_Capture(object):
 #    o.connect()
 #    time.sleep(3)
 #    if not o.is_connected():
-#        print ("Not connected")
+#        WriteToLog("Not connected")
 #    else:
 #        o.capture_data()

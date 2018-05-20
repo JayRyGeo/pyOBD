@@ -23,6 +23,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="debugEvent.py" />
+    <Compile Include="Logger.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="obd2_codes.py" />
     <Compile Include="obd_capture.py" />
     <Compile Include="obd_io.py" />

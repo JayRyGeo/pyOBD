@@ -36,7 +36,7 @@ GET_DTC_COMMAND   = "03"
 CLEAR_DTC_COMMAND = "04"
 GET_FREEZE_DTC_COMMAND = "07"
 
-from debugEvent import debug_display
+from Logger import WriteToLog
 
 #__________________________________________________________________________
 def decrypt_dtc_code(code):
@@ -86,7 +86,7 @@ class OBDPort:
         self.port = None
          
         self._notify_window=_notify_window
-        debug_display(self._notify_window, 1, "Opening interface (serial port)")
+        WriteToLog("Opening interface (serial port)")
 
         # STEP 1 - Try to get an initial connection
         try:
@@ -96,14 +96,14 @@ class OBDPort:
         except serial.SerialException:
             # There wasn't a connection established in the first place
             _, e, _ = sys.exc_info()
-            print (e)
+            WriteToLog(e)
             self.State = 0
             return None
              
         #If we got this far, STEP 1 was successful and there was some sort of connection made, we need to check
         #if this connection is an ELM device.
-        debug_display(self._notify_window, 1, "Interface " + self.port.portstr + " successfully opened")
-        debug_display(self._notify_window, 1, "Connecting to ECU...")
+        WriteToLog("Interface " + self.port.portstr + " successfully opened")
+        WriteToLog("Connecting to ECU...")
          
         #STEP 2 - send atz command to the device that we detected in STEP 1
         #atz command resets the device and forces it to resend ELM-USB identification
@@ -123,9 +123,9 @@ class OBDPort:
             return None
         
         #Debug display of found values
-        debug_display(self._notify_window, 2, "atz response:" + self.ELMver)
+        WriteToLog("atz response:" + self.ELMver)
         self.send_command("ate0")  # echo off
-        debug_display(self._notify_window, 2, "ate0 response:" + self.get_result())
+        WriteToLog("ate0 response:" + self.get_result())
         self.send_command("0100")
 
         #STEP 4 - Check if the device is good to go
@@ -137,7 +137,7 @@ class OBDPort:
             return None
         
         #Got a ready response from the device!
-        debug_display(self._notify_window, 2, "0100 response:" + ready)
+        WriteToLog("0100 response:" + ready)
         return None
               
     def close(self):
@@ -158,7 +158,7 @@ class OBDPort:
             for c in cmd:
                 self.port.write(c)
             self.port.write("\r\n")
-            debug_display(self._notify_window, 3, "Sending test command:" + cmd)
+            WriteToLog( "Sending test command:" + cmd)
 
     def interpret_result(self,code):
         """Internal use only: not a public interface"""
@@ -169,7 +169,7 @@ class OBDPort:
         # 9 seems to be the length of the shortest valid response
         if len(code) < 7:
             #raise Exception("BogusCode")
-            print ("boguscode?"+code)
+            WriteToLog("boguscode?"+code)
          
         # get the first thing returned, echo should be off
         code = string.split(code, "\r")
@@ -198,7 +198,7 @@ class OBDPort:
                 if len(c) == 0:
                     if(repeat_count == 5):
                         break
-                print ("Got nothing\n")
+                WriteToLog("Got nothing\n")
                 repeat_count = repeat_count + 1
                 continue
                     
@@ -211,14 +211,14 @@ class OBDPort:
                 if buffer != "" or c != ">": #if something is in buffer, add everything
                     buffer = buffer + c
                     
-            #debug_display(self._notify_window, 3, "Get result:" + buffer)
+            #WriteToLog( "Get result:" + buffer)
             if(buffer == ""):
                 return None
 
             return buffer
 
         else:
-            debug_display(self._notify_window, 3, "NO self.port!")
+            WriteToLog( "NO self.port!")
             return None
 
      # get sensor value from command
@@ -284,12 +284,12 @@ class OBDPort:
         DTCCodes = []
           
           
-        print ("Number of stored DTC:" + str(dtcNumber) + " MIL: " + str(mil))
+        WriteToLog("Number of stored DTC:" + str(dtcNumber) + " MIL: " + str(mil))
         # get all DTC, 3 per mesg response
         for i in range(0, ((dtcNumber+2)/3)):
             self.send_command(GET_DTC_COMMAND)
             res = self.get_result()
-            print ("DTC result:" + res)
+            WriteToLog("DTC result:" + res)
             for i in range(0, 3):
                 val1 = hex_to_int(res[3+i*6:5+i*6])
                 val2 = hex_to_int(res[6+i*6:8+i*6]) #get DTC codes from response (3 DTC each 2 bytes)
@@ -309,7 +309,7 @@ class OBDPort:
         if res[:7] == "NODATA": #no freeze frame
             return DTCCodes
           
-        print ("DTC freeze result:" + res)
+        WriteToLog("DTC freeze result:" + res)
         for i in range(0, 3):
             val1 = hex_to_int(res[3+i*6:5+i*6])
             val2 = hex_to_int(res[6+i*6:8+i*6]) #get DTC codes from response (3 DTC each 2 bytes)
