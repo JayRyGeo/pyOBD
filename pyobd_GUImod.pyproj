@@ -19,12 +19,6 @@
     <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="bg_black.jpg" />
-    <Content Include="cowfish.png" />
-    <Content Include="doc\install.html" />
-    <Content Include="doc\mac_super_screenshot.png" />
-    <Content Include="doc\super_screenshot.bmp" />
-    <Content Include="doc\x11_super_screenshot.png" />
     <Content Include="pyobd.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -38,9 +32,6 @@
     <Compile Include="testingScript.py">
       <SubType>Code</SubType>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="doc" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
 </Project>
