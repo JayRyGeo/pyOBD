@@ -98,9 +98,9 @@ class OBDPort:
              
         except serial.SerialException:
             # There wasn't a connection established in the first place
-            WriteToLog(serial.SerialException)
+            WriteToLog("Not Successful")
             self.State = 0
-            return False
+            return None
              
         #If we got this far, STEP 1 was successful and there was some sort of connection made, we need to check
         #if this connection is an ELM device.
