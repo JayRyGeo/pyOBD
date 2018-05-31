@@ -74,6 +74,7 @@ class OBDPort:
     def __init__(self,portnum,baudRate,SERTIMEOUT):
         """Initializes port by resetting device and gettings supported PIDs. """
         # These should really be set by the user.
+        print("In OBDPORT")
         baud = baudRate
         databits = EIGHTBITS
         # Parity
@@ -88,6 +89,7 @@ class OBDPort:
         self.port = None
 
         WriteToLog("Opening interface (serial port)")
+        time.sleep(5)
 
         # STEP 1 - Try to get an initial connection
         try:
