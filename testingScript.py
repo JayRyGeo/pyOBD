@@ -68,7 +68,7 @@ def findBaudRate():
         for baud in stdBaudList:
             WriteToLog("Attempting Baud %s on Port %s " % (baud,port))
             time.sleep(5)
-            obdConn = OBDPort(port, baud, 2)
+            obdConn = OBDPort(port, int(baud), 2)
             time.sleep(5)
 
             if ( obdConn == True ):
