@@ -55,13 +55,14 @@ def findBaudRate():
     # https://python-obd.readthedocs.io/en/latest/Connections/#protocol_id
 
     successPortBaud = { 'Port' : 'Baud' }
-    time.sleep(5)
+    #time.sleep(5)
 
     # Get Port
     portlist = []
     portlist = GetPort()
 
     WriteToLog("Found ports: %s" % portlist)
+    time.sleep(5)
 
     for port in portlist:
         for baud in stdBaudList:
