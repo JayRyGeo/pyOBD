@@ -76,7 +76,7 @@ class OBDPort:
         # These should really be set by the user.
         print("In OBDPORT")
         baud = baudRate
-        databits = 'EIGHTBITS'
+        databits = serial.EIGHTBITS
         # Parity
         par = serial.PARITY_NONE
         # Stop Bits
