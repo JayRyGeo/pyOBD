@@ -98,8 +98,7 @@ class OBDPort:
              
         except serial.SerialException:
             # There wasn't a connection established in the first place
-            _, e, _ = sys.exc_info()
-            WriteToLog(e)
+            WriteToLog(serial.SerialException)
             self.State = 0
             return False
              

@@ -32,8 +32,8 @@
       <file leaf-file-name="obd_io.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/obd_io.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+            <state relative-caret-position="317">
+              <caret line="100" column="45" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
               <folding>
                 <element signature="e#1007#1020#0" expanded="true" />
               </folding>
@@ -73,8 +73,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="977" />
-    <option name="y" value="612" />
+    <option name="x" value="727" />
+    <option name="y" value="609" />
     <option name="width" value="1581" />
     <option name="height" value="1426" />
   </component>
@@ -261,11 +261,25 @@
       <option name="project" value="LOCAL" />
       <updated>1527735855965</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Debugging">
+      <created>1527736139871</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1527736139871</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Debugging">
+      <created>1527736238768</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1527736238768</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="977" y="612" width="1581" height="1426" extended-state="0" />
+    <frame x="727" y="609" width="1581" height="1426" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -433,8 +447,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/obd_io.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
+        <state relative-caret-position="317">
+          <caret line="100" column="45" selection-start-line="100" selection-start-column="45" selection-end-line="100" selection-end-column="45" />
           <folding>
             <element signature="e#1007#1020#0" expanded="true" />
           </folding>
