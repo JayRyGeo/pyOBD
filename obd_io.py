@@ -124,7 +124,7 @@ class OBDPort:
         if(self.ELMver is None):
             #No ELM Version, this isn't an ELM device!!
             self.State = 0
-            return False
+            return None
         
         #Debug display of found values
         WriteToLog("atz response:" + self.ELMver)
@@ -138,7 +138,7 @@ class OBDPort:
         if(ready is None):
             #Looks like we were NOT ready
             self.State = 0
-            return False
+            return None
         
         #Got a ready response from the device!
         WriteToLog("0100 response:" + ready)
