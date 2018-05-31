@@ -131,3 +131,6 @@ while True:
         time.sleep(0.5)
 
     # Btn 4
+
+
+time.sleep(60)
