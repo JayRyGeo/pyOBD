@@ -1,6 +1,5 @@
 import serial
-from Logger import WriteToLog
-import platform
+from dualIO import WriteToLog
 
 
 def scanSerial():
