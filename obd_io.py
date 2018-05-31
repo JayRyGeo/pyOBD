@@ -115,8 +115,9 @@ class OBDPort:
             time.sleep(1)
         except serial.SerialException:
             #The command was not successful
+            WriteToLog("Port %s was not successful" % portnum)
             self.State = 0
-            return False
+            return None
          
         #STEP 3 - Get the ELM version to further verify that this is an ELM device we can interface with.
         self.ELMver = self.get_result()
