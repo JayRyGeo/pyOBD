@@ -2,7 +2,7 @@
 # while also making a log file.
 
 def WriteToLog(logText):
-    logFile = open("./OBD.log", "a")
+    logFile = open("./OBD.log", "w+")
 
     writeThis = str(logText) + "\n"
 
