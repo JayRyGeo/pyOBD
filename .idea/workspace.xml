@@ -4,7 +4,6 @@
     <list default="true" id="90300bc0-686f-4407-8084-eee7c1a7aa33" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obd_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/obd_io.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testingScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/testingScript.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +20,8 @@
       <file leaf-file-name="testingScript.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testingScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="68" column="70" selection-start-line="68" selection-start-column="70" selection-end-line="68" selection-end-column="70" />
+            <state relative-caret-position="77">
+              <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
               <folding>
                 <element signature="e#87#110#0" expanded="true" />
               </folding>
@@ -33,8 +32,8 @@
       <file leaf-file-name="obd_io.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/obd_io.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+            <state relative-caret-position="416">
+              <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
               <folding>
                 <element signature="e#1007#1020#0" expanded="true" />
               </folding>
@@ -74,8 +73,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1149" />
-    <option name="y" value="720" />
+    <option name="x" value="977" />
+    <option name="y" value="612" />
     <option name="width" value="1581" />
     <option name="height" value="1426" />
   </component>
@@ -248,11 +247,25 @@
       <option name="project" value="LOCAL" />
       <updated>1527735503193</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Debugging">
+      <created>1527735778834</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1527735778834</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Debugging">
+      <created>1527735855965</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1527735855965</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1149" y="720" width="1581" height="1426" extended-state="0" />
+    <frame x="977" y="612" width="1581" height="1426" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -410,8 +423,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testingScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="68" column="70" selection-start-line="68" selection-start-column="70" selection-end-line="68" selection-end-column="70" />
+        <state relative-caret-position="77">
+          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
           <folding>
             <element signature="e#87#110#0" expanded="true" />
           </folding>
@@ -420,8 +433,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/obd_io.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="73" column="38" lean-forward="true" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+        <state relative-caret-position="416">
+          <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
           <folding>
             <element signature="e#1007#1020#0" expanded="true" />
           </folding>
