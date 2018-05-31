@@ -1,11 +1,99 @@
-
 # Testing script to help figure out the programming flow.
 
+# script dependant includes
+# import RPi.GPIO as GPIO
+from Logger import WriteToLog
+import os
+
+# normalCapture() includes
 from obd_capture import OBD_Capture
+from obd_utils import scanSerial as GetPort
 
-cap = OBD_Capture()
-cap.connect()
-portState = cap.is_connected()
+# findBaudRate() includes
+from obd_io import OBDPort
 
-if portState is None:
-    print("Cannot connect to car.  Please check connections and try again.")
+# Memory for the buttons
+btn1 = 0
+btn2 = 0
+btn3 = 0
+btn4 = 0
+
+# GPIO locations of the buttons in order from top to bottom
+# when the buttons are on the right of the screen
+btn1Loc = 17
+btn2Loc = 22
+btn3Loc = 23
+btn4Loc = 27
+#GPIO.setmode(GPIO.BCM)
+
+# Setup the buttons to capture data.
+#GPIO.setup(btn1Loc, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+#GPIO.setup(btn2Loc, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+#GPIO.setup(btn3Loc, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+#GPIO.setup(btn4Loc, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+
+def normalCapture():
+    """"Run the OBD_IO script with static values to capture OBD Data"""
+    cap = OBD_Capture()
+    cap.connect()
+    portState = cap.is_connected()
+
+    if portState is None:
+        print("Cannot connect to car.  Please check connections and try again.")
+
+
+def findBaudRate():
+    """"Find the Baud Rate by Iterating Through Common Rates"""
+    # Standard baud rates come from the pySerial documentation. Alt baud list comes from
+    # python-OBD read the docs.
+    stdBaudList = [50, 75, 110, 134, 150, 200, 300, 600, 1200, 1800, 2400, 4800, 9600, 19200, 38400, 57600, 115200]
+    altBaudList = [9600, 38400, 19200, 57600, 115200]
+
+    # Protocols, this may come in hand later
+    # https://python-obd.readthedocs.io/en/latest/Connections/#protocol_id
+
+    successPortBaud = { 'Port' : 'Baud' }
+
+    # Get Port
+    portlist = []
+    portlist = GetPort()
+
+    WriteToLog("Found ports: %s" % portlist)
+
+    for port in portlist:
+        for baud in stdBaudList:
+            WriteToLog("Attempting Baud %s on Port %s " % (baud,port))
+            obdConn = OBDPort(port, baud, 2)
+
+            if ( obdConn == True ):
+                WriteToLog("Successfull Connection: Port %s, Baud %s" % (port, baud))
+                successPortBaud[str(port)] = str(baud)
+
+
+
+
+def printActivePorts():
+    """Log the Active Ports on the System"""
+    devList = []
+
+    for entry in os.walk("/dev"):
+        # Make a list, for future use as what we are doing can easily be accomplished without
+        # the use of a list.
+        devList.append(entry)
+
+    WriteToLog(devList)
+
+
+# Clear the terminal
+os.system("clear")
+
+# Print welcome screen and menu
+print("Button Actions:")
+print("[TOP]\tNormal Capture Mode")
+print("[2nd]\tFind Baud Rate")
+print("[3rd]\tPrint Active Ports on Device")
+print("[Btm]\tEMPTY")
+
+printActivePorts()
+findBaudRate()

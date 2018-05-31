@@ -1,4 +1,5 @@
 import serial
+from Logger import WriteToLog
 import platform
 
 def scanSerial():
@@ -6,6 +7,7 @@ def scanSerial():
     available = []
     # Enable Bluetooh connection
     for i in range(10):
+        # debug : WriteToLog("Trying /dev/rfcomm%s" % i)
         try:
             s = serial.Serial("/dev/rfcomm"+str(i))
             available.append( (str(s.port)))
@@ -14,6 +16,7 @@ def scanSerial():
             pass
     # Enable USB connection
     for i in range(256):
+        # debug : WriteToLog("Trying /dev/ttyUSB%s" % i)
         try:
             s = serial.Serial("/dev/ttyUSB"+str(i))
             available.append(s.portstr)
@@ -30,6 +33,7 @@ def scanSerial():
             s.close()
         except serial.SerialException:
             pass
+
 # Enable obdsim 
 #for i in range(256):
 #try: #scan Simulator

@@ -71,21 +71,22 @@ def decrypt_dtc_code(code):
 
 class OBDPort:
     """ OBDPort abstracts all communication with OBD-II device."""
-    def __init__(self,portnum,_notify_window,SERTIMEOUT,RECONNATTEMPTS):
+    def __init__(self,portnum,baudRate,SERTIMEOUT):
         """Initializes port by resetting device and gettings supported PIDs. """
         # These should really be set by the user.
-        #baud     = 38400
-        baud = 115200
-        databits = 8
-        par = serial.PARITY_NONE  # parity
-        sb = 1                   # stop bits
+        baud = baudRate
+        databits = EIGHTBITS
+        # Parity
+        par = serial.PARITY_NONE
+        # Stop Bits
+        sb = 1
+        # Time out
         to = SERTIMEOUT
         self.ELMver = "Unknown"
         # state SERIAL is 1 connected, 0 disconnected (connection failed)
         self.State = 1
         self.port = None
-         
-        self._notify_window=_notify_window
+
         WriteToLog("Opening interface (serial port)")
 
         # STEP 1 - Try to get an initial connection
@@ -98,7 +99,7 @@ class OBDPort:
             _, e, _ = sys.exc_info()
             WriteToLog(e)
             self.State = 0
-            return None
+            return False
              
         #If we got this far, STEP 1 was successful and there was some sort of connection made, we need to check
         #if this connection is an ELM device.
@@ -108,19 +109,19 @@ class OBDPort:
         #STEP 2 - send atz command to the device that we detected in STEP 1
         #atz command resets the device and forces it to resend ELM-USB identification
         try:
-            self.send_command("AT Z") #initialize
+            self.send_command("ATZ") #initialize
             time.sleep(1)
         except serial.SerialException:
             #The command was not successful
             self.State = 0
-            return None
+            return False
          
         #STEP 3 - Get the ELM version to further verify that this is an ELM device we can interface with.
         self.ELMver = self.get_result()
         if(self.ELMver is None):
             #No ELM Version, this isn't an ELM device!!
             self.State = 0
-            return None
+            return False
         
         #Debug display of found values
         WriteToLog("atz response:" + self.ELMver)
@@ -134,11 +135,11 @@ class OBDPort:
         if(ready is None):
             #Looks like we were NOT ready
             self.State = 0
-            return None
+            return False
         
         #Got a ready response from the device!
         WriteToLog("0100 response:" + ready)
-        return None
+        return True
               
     def close(self):
         """ Resets device and closes all associated filehandles"""
