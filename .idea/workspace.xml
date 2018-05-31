@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90300bc0-686f-4407-8084-eee7c1a7aa33" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/pyobd_GUImod.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pyobd_GUImod.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/OBD.log" beforeDir="false" afterPath="$PROJECT_DIR$/OBD.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obd_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/obd_io.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obd_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/obd_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testingScript.py" beforeDir="false" afterPath="$PROJECT_DIR$/testingScript.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,10 +20,10 @@
       <file leaf-file-name="testingScript.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testingScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="701">
-              <caret line="62" column="51" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="51" />
+            <state relative-caret-position="799">
+              <caret line="129" column="30" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
               <folding>
-                <element signature="e#113#142#0" expanded="true" />
+                <element signature="e#87#110#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -199,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1527363055353</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Testing/Debugging for unknown baudrates">
+      <created>1527726940632</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527726940633</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -209,11 +212,11 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50097466" side_tool="true" weight="0.3295711" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49902534" weight="0.3295711" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49902534" visible="true" weight="0.3295711" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.20842738" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.3295711" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26120856" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26120856" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" weight="0.3294347" />
@@ -264,7 +267,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Idea Config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Idea Config" />
+    <MESSAGE value="Testing/Debugging for unknown baudrates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing/Debugging for unknown baudrates" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/testingScript.py">
@@ -272,7 +276,7 @@
         <state relative-caret-position="1425">
           <caret line="95" column="14" selection-start-line="95" selection-start-column="14" selection-end-line="95" selection-end-column="14" />
           <folding>
-            <element signature="e#113#142#0" expanded="true" />
+            <element signature="e#87#110#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -357,10 +361,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testingScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="701">
-          <caret line="62" column="51" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="51" />
+        <state relative-caret-position="799">
+          <caret line="129" column="30" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
           <folding>
-            <element signature="e#113#142#0" expanded="true" />
+            <element signature="e#87#110#0" expanded="true" />
           </folding>
         </state>
       </provider>

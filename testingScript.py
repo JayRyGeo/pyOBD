@@ -1,8 +1,9 @@
 # Testing script to help figure out the programming flow.
 
 # script dependant includes
-# import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 from Logger import WriteToLog
+import time
 import os
 
 # normalCapture() includes
@@ -24,13 +25,13 @@ btn1Loc = 17
 btn2Loc = 22
 btn3Loc = 23
 btn4Loc = 27
-#GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BCM)
 
 # Setup the buttons to capture data.
-#GPIO.setup(btn1Loc, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-#GPIO.setup(btn2Loc, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-#GPIO.setup(btn3Loc, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-#GPIO.setup(btn4Loc, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(btn1Loc, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(btn2Loc, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(btn3Loc, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(btn4Loc, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 
 def normalCapture():
@@ -95,5 +96,38 @@ print("[2nd]\tFind Baud Rate")
 print("[3rd]\tPrint Active Ports on Device")
 print("[Btm]\tEMPTY")
 
-printActivePorts()
-findBaudRate()
+while True:
+    # Btn 1
+    Btn1_state = GPIO.input(btn1Loc)
+    if Btn1_state == False:
+        if btn1 == 1:
+            btn1 = 0
+            #off action
+        else:
+            btn1 = 1
+            normalCapture()
+        time.sleep(0.5)
+
+    # Btn 2
+    Btn2_state = GPIO.input(btn2Loc)
+    if Btn2_state == False:
+        if btn2 == 1:
+            btn2 = 0
+            # off action
+        else:
+            btn2 = 1
+            findBaudRate()
+        time.sleep(0.5)
+
+    # Btn 3
+    Btn3_state = GPIO.input(btn3Loc)
+    if Btn3_state == False:
+        if btn3 == 1:
+            btn3 = 0
+            # off action
+        else:
+            btn3 = 1
+            printActivePorts()
+        time.sleep(0.5)
+
+    # Btn 4
