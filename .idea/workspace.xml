@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90300bc0-686f-4407-8084-eee7c1a7aa33" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/obd_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/obd_io.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,8 +31,8 @@
       <file leaf-file-name="obd_io.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/obd_io.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="100" column="38" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
+            <state relative-caret-position="611">
+              <caret line="163" column="35" selection-start-line="163" selection-start-column="35" selection-end-line="163" selection-end-column="35" />
               <folding>
                 <element signature="e#1007#1020#0" expanded="true" />
               </folding>
@@ -281,7 +281,28 @@
       <option name="project" value="LOCAL" />
       <updated>1527736360453</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Debugging">
+      <created>1527736641782</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1527736641782</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Debugging">
+      <created>1527736665488</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1527736665488</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Debugging">
+      <created>1527736772834</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1527736772834</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -453,8 +474,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/obd_io.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="100" column="38" selection-start-line="100" selection-start-column="38" selection-end-line="100" selection-end-column="38" />
+        <state relative-caret-position="611">
+          <caret line="163" column="35" selection-start-line="163" selection-start-column="35" selection-end-line="163" selection-end-column="35" />
           <folding>
             <element signature="e#1007#1020#0" expanded="true" />
           </folding>
