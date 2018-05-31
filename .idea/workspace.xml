@@ -20,34 +20,10 @@
       <file leaf-file-name="testingScript.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testingScript.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="129" column="30" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
+            <state relative-caret-position="559">
+              <caret line="119" column="21" selection-start-line="119" selection-start-column="21" selection-end-line="119" selection-end-column="21" />
               <folding>
                 <element signature="e#87#110#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="obd_io.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/obd_io.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="66" column="44" lean-forward="true" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
-              <folding>
-                <element signature="e#1007#1020#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="obd_utils.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/obd_utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,8 +47,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/obd_capture.py" />
-        <option value="$PROJECT_DIR$/obd_io.py" />
         <option value="$PROJECT_DIR$/obd_utils.py" />
+        <option value="$PROJECT_DIR$/obd_io.py" />
+        <option value="$PROJECT_DIR$/Logger.py" />
         <option value="$PROJECT_DIR$/testingScript.py" />
       </list>
     </option>
@@ -202,7 +179,28 @@
       <option name="project" value="LOCAL" />
       <updated>1527726940633</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="GPIO action capture">
+      <created>1527728022547</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527728022547</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Logging changes">
+      <created>1527734111826</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1527734111826</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Logging changes">
+      <created>1527734945439</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1527734945439</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -268,7 +266,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Idea Config" />
     <MESSAGE value="Testing/Debugging for unknown baudrates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing/Debugging for unknown baudrates" />
+    <MESSAGE value="GPIO action capture" />
+    <MESSAGE value="Logging changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logging changes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/testingScript.py">
@@ -332,6 +332,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/obd_io.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="73" column="51" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+          <folding>
+            <element signature="e#1007#1020#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/obd_capture.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -349,20 +359,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/obd_io.py">
+    <entry file="file://$PROJECT_DIR$/Logger.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="44" lean-forward="true" selection-start-line="66" selection-start-column="44" selection-end-line="66" selection-end-column="44" />
-          <folding>
-            <element signature="e#1007#1020#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testingScript.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="129" column="30" selection-start-line="129" selection-start-column="30" selection-end-line="129" selection-end-column="30" />
+        <state relative-caret-position="559">
+          <caret line="119" column="21" selection-start-line="119" selection-start-column="21" selection-end-line="119" selection-end-column="21" />
           <folding>
             <element signature="e#87#110#0" expanded="true" />
           </folding>

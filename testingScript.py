@@ -117,7 +117,7 @@ while True:
         else:
             btn2 = 1
             findBaudRate()
-        time.sleep(0.5)
+        time.sleep(60)
 
     # Btn 3
     Btn3_state = GPIO.input(btn3Loc)
