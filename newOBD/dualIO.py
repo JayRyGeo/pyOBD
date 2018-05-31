@@ -3,5 +3,6 @@
 
 def WriteToLog(logText):
     """Allows for printing to the console and logging at the same time"""
+    print(logText)
     with open('OBD.log', 'a') as logFile:
-        logFile.write(logText)
+        logFile.write(logText + "\n")
