@@ -106,6 +106,7 @@ class OBDPort:
         #if this connection is an ELM device.
         WriteToLog("Interface " + self.port.portstr + " successfully opened")
         WriteToLog("Connecting to ECU...")
+        time.sleep(5)
          
         #STEP 2 - send atz command to the device that we detected in STEP 1
         #atz command resets the device and forces it to resend ELM-USB identification
