@@ -53,7 +53,7 @@ class OBDConn:
         response = self.activePort.read(64)
 
         # Strip out the extras from the response, this will leave us with a Hex value
-        response.replace("\r\n>", "")
-        response.replace(" ", "")
+        #response.replace("\r\n>", "")
+        #response.replace(" ", "")
 
         return response
