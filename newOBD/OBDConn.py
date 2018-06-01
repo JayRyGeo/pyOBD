@@ -29,7 +29,7 @@ class OBDConn:
         WriteToLog("Checking status...")
         time.sleep(1)
         self.at0Status = self.CmdControl("AT0")
-        if self.at0Status == "OK":
+        if self.at0Status == "OK" or self.at0Status == "Ok":
             WriteToLog(self.at0Status)
         else:
             WriteToLog("AT0 says not ready: %s" % self.at0Status)
